@@ -56,9 +56,9 @@
       }
       updateBannerVisibility();
     }
-    function sendMessageToFlutter(message) {
-      window.webkit.messageHandlers.flutter.postMessage(message);
-    }
+    // function sendMessageToFlutter(message) {
+    //   window.webkit.messageHandlers.flutter.postMessage(message);
+    // }
     var buildUrl = "Build";
     var loaderUrl = buildUrl + "/ColorDash.loader.js";
     var config = {
@@ -102,7 +102,7 @@
 
         loadingBar.style.display = "none";
         fullscreenButton.onclick = () => {
-                sendMessageToFlutter("helloooo colro dassghhhh");
+                // sendMessageToFlutter("helloooo colro dassghhhh");
           unityInstance.SetFullscreen(1);
         };
       }).catch((message) => {
