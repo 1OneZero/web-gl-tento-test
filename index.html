@@ -97,8 +97,8 @@
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
-        // window.flutterData.postMessage("summer-code-0011");
-        window.flutterData.postMessage('Hello from JavaScript to flutter --game = color dash');
+
+        // window.flutterData.postMessage('fliuttetrererer');
 
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
@@ -106,6 +106,7 @@
           loadingBar.style.display = "none";
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
+
           };
         }).catch((message) => {
           alert(message);
@@ -113,14 +114,18 @@
       };
       document.body.appendChild(script);
 
-       // function postGameScore(score)
-       //  {
-          // window.flutterData.postMessage(score);
-       //  }
+
     </script>
 
 </body>
 
+<script>
 
+  function postGameScore(score) {
+    console.log("scoreeeee isss", score);
+    // window.flutterData.postMessage("fluuuuuuuuuu");
+    window.flutterData.postMessage(score);
+  }
+</script>
 
 </html>
