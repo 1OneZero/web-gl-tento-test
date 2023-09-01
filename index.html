@@ -102,7 +102,9 @@
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
-        window.flutterData.postMessage("summer-code-0011");
+        // window.flutterData.postMessage("summer-code-0011");
+        window.flutterData.postMessage('Hello from JavaScript to flutter --game = color dash');
+        
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
