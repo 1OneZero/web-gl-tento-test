@@ -56,10 +56,10 @@
       }
       updateBannerVisibility();
     }
-    function sendMessageToFlutter(message) {
-      console.log("fuckkkkkkkk");
-      window.webkit.messageHandlers.flutter.postMessage(message);
-    }
+    // function sendMessageToFlutter(message) {
+    //   console.log("fuckkkkkkkk");
+    //   window.webkit.messageHandlers.flutter.postMessage(message);
+    // }
     var buildUrl = "Build";
     var loaderUrl = buildUrl + "/ColorDash.loader.js";
     var config = {
@@ -95,7 +95,7 @@
     var script = document.createElement("script");
     script.src = loaderUrl;
     script.onload = () => {
-
+  window.flutterData.postMessage('Hello from JavaScript to wegl color dash');
 
       createUnityInstance(canvas, config, (progress) => {
         progressBarFull.style.width = 100 * progress + "%";
@@ -111,7 +111,7 @@
       });
     };
     document.body.appendChild(script);
-         sendMessageToFlutter("helloooo colro dassghhhh");
+         // sendMessageToFlutter("helloooo colro dassghhhh");
   </script>
 </body>
 
