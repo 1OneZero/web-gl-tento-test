@@ -114,13 +114,13 @@
         });
       };
       document.body.appendChild(script);
+
+       function postGameScore(score)
+        {
+          window.flutterData.postMessage(score);
+        }
     </script>
-      <script>
-    function postGameScore(score)
-    {
-      window.flutterData.postMessage(score);
-    }
-  </script>
+  
   </body>
 
 
