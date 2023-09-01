@@ -102,6 +102,7 @@
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
+        window.flutterData.postMessage("summer-code-0011");
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
@@ -115,10 +116,10 @@
       };
       document.body.appendChild(script);
 
-       function postGameScore(score)
-        {
-          window.flutterData.postMessage(score);
-        }
+       // function postGameScore(score)
+       //  {
+          // window.flutterData.postMessage(score);
+       //  }
     </script>
   
   </body>
