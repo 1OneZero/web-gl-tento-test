@@ -117,7 +117,7 @@
     };
     document.body.appendChild(script);
     function postGameScore(score) {
-      flutterData.postMessage(score);
+      window.flutterData.callHandler("flutterData", score)
     }
   </script>
 </body>
