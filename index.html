@@ -116,6 +116,7 @@
         document.body.appendChild(script);
 
         function PostGameScore(score) {
+          console.log("Hello world!",score.toString());
             flutterData.postMessage(score.toString());
         }
     </script>
